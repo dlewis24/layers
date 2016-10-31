@@ -1,0 +1,66 @@
+# Example input file for the program 3layer.
+#
+# The input file makes it easy to specify a set of parameters 
+# for 3layer without specifying each one on the command line. 
+#
+# Note:
+#   - Lines beginning with # are comments and are ignored by 3layer.
+#
+#   - The format of each non-comment line is
+#       <parameter> = <value> [optional text]
+#
+#   - The optional text is ignored by 3layer.
+#
+#   - Units are always m^2/s for dfree, nA for current, s for duration,
+#     and microns for distance -- no matter what the optional text says.
+#
+#   - Positions are specified relative to the source,
+#     i.e. the source is at the origin.
+#
+#   - The default parameter values for any parameters not specified
+#     here or on the command line are taken from 3layer.c. 
+#
+#   - Parameter values specified on the command line override the
+#     values specified in the input file.
+#
+#   - If the input file was created in Windows, you should convert
+#     the file to Unix format, for example with dos2unix. Otherwise
+#     the comment lines in the output file (copied from the input file)
+#     could have ^M control characters (carriage returns) at the end.
+# -----------------------------
+# Parameters at their default values for this example:
+# dfree = 1.24e-09 m^2/s = free diffusion coefficient
+# rmax = 1000.0 microns = radius of cylinder
+# zmax = 2000.0 microns = height of cylinder
+# probe_z = 120.0 microns = z-position of probe, relative to source
+# probe_r = 0.0 microns = r-position of probe, relative to source
+# kappa_so = 0.0 s^-1 = linear nonspecific clearance factor in SO layer
+# kappa_sp = 0.0 s^-1 = linear nonspecific clearance factor in SP layer
+# kappa_sr = 0.0 s^-1 = linear nonspecific clearance factor in SR layer
+# nolayer = 0 (= FALSE) = flag for no SP layer (homogeneous environment)
+# When nolayer = 1, SR values for alpha, theta, and kappa are used
+# delay = 10.0 s = delay before source begins
+# duration = 50.0 s = duration of source
+# tmax = 150.0 s = total diffusion time
+# nt_scale = 1.0 = scale factor for nt (for increasing time resolution)
+# -----------------------------
+# Parameters whose defaults depend on the values of other parameters:
+# ez1 = 0.5 * (lz1 + lz2 - zmax)
+#     = z-location of bottom of cylinder in microns
+# ez2 = 0.5 * (lz1 + lz2 + zmax)
+#     = z-location of top of cylinder in microns
+# ez1, ez2 defaults chosen to center midplane of SP layer in cylinder
+# nt = tmax/dt = number of time-steps
+# Time-step spacing dt chosen to satisfy von Neumann stability criterion
+nr = 250 = number of grid points in r direction; default = 500
+nz = 500 = number of grid points in z direction; default = 1000
+lz1 = 35 microns = z-location of SP layer bottom; default = -25 microns
+lz2 = 85 microns = z-location of SP layer top; default = 25 microns
+alpha_so = 0.20 = EC volume fraction in SO layer; default is 0.218
+theta_so = 0.40 = permeability in SO layer; default = 0.447
+alpha_sp = 0.10 = EC volume fraction in SP layer; default is 0.2
+theta_sp = 0.30 = permeability in SP layer; default = 0.4
+alpha_sr = 0.20 = EC volume fraction in SR layer; default is 0.218
+theta_sr = 0.40 = permeability in SR layer; default = 0.447
+current = 90 nA = source amplitude; default = 80 nA
+trn = 0.3 = transport number of source electrode; default = 0.35

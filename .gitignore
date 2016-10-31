@@ -1,0 +1,9 @@
+*.o
+*~
+TAGS
+3layer
+!/3layer/
+fit-layer
+!/fit-layer/
+/doc/*
+!/doc/source/
