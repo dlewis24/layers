@@ -75,8 +75,7 @@ References:
 
 \section license_sec License
 
-Copyright (C) 2012-2013  
-<a href="mailto:lewis@nki.rfmh.org">David Lewis</a>, CABI, NKI
+Copyright (C) 2012-2013 David Lewis, CABI, NKI
 
 This program is free software; you can redistribute it and/or
 modify it under the terms of the GNU General Public License
@@ -524,7 +523,7 @@ gnuplot> <b>plot [0:150][0:1] "data.dat" using 1:2 title "data.dat", "data.dat.o
 
 
 
-\author <a href="mailto:lewis@nki.rfmh.org">David Lewis</a>, CABI, NKI
+\author David Lewis, CABI, NKI
 \author Based on IDL software written by Jan Hrabe and David Lewis, CABI, NKI
 \date 2012-2013
 */
