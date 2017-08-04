@@ -13,11 +13,14 @@ diffusion described in (\ref saghyan "Saghyan et al., 2012")
 and in (\ref arranz "Arranz et al., 2014") for the case of
 3 adjacent homogeneous layers of tissue.  The software
 is useful in modeling or analyzing data from extracellular
-diffusion measurements made with the Real-Time Iontophoretic
-(RTI) method (\ref nicholson "Nicholson and Phillips, 1981")
-of diffusion in 3 distinct layers that have different diffusion
-parameters.  The two programs, 3layer and fit-layer, are
-described below.
+diffusion measurements made with the real-time iontophoretic
+(RTI) method (\ref nicholson "Nicholson and Phillips, 1981";
+\ref sykova "Syková and Nicholson, 2008") of diffusion in
+3 distinct layers that have different diffusion parameters.
+The two programs, 3layer and fit-layer, are described below.
+The program 3layer can also be used to model images from
+integrative optical imaging (IOI) (\ref nicholson2 "Nicholson and Tao, 1993") for the case of diffusion in 3 distinct layers
+that have different diffusion parameters.
 
 The implementation described in (Saghyan et al., 2012) was in 
 IDL.  This implementation is in C and is described in
@@ -60,17 +63,26 @@ References:
   Arranz AM, Perkins KL, Irie F, Lewis DP, Hrabe J, Xiao F, Itano N,
   Kimata K, Hrabetova S, Yamaguchi Y (2014) Hyaluronan deficiency due
   to Has3 knock-out causes altered neuronal activity and seizures via
-  reduction in brain extracellular space.  J Neurosci 34:6164-76.
+  reduction in brain extracellular space.  J Neurosci 34:6164-6176.
 
 \anchor nicholson
   Nicholson C, Phillips JM (1981) Ion diffusion modified by 
   tortuosity and volume fraction in the extracellular 
-  microenvironment of the rat cerebellum.  J Physiol 321:225–57.
+  microenvironment of the rat cerebellum.  J Physiol 321:225-257.
+
+\anchor nicholson2
+  Nicholson C, Tao L (1993) Hindered diffusion of high molecular
+  weight compounds in brain extracellular microenvironment
+  measured with integrative optical imaging. Biophys J 65:2277-2290.
 
 \anchor saghyan 
   Saghyan A, Lewis DP, Hrabe J, Hrabetova S (2012) Extracellular 
   diffusion in laminar brain structures exemplified by hippocampus.  
-  J Neurosci Methods 205:110-8.  Epub 2011 Dec 30.
+  J Neurosci Methods 205:110-118.
+
+\anchor sykova
+  Syková E, Nicholson C (2008) Diffusion in brain extracellular
+  space. Physiol Rev 88:1277-1340.
 
 
 \section license_sec License
