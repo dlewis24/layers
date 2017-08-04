@@ -9,8 +9,9 @@ every external (variable, macro, function, etc.) has a documentation
 entry. </I>
 
 This software implements the multilayer model of extracellular
-diffusion described in (\ref saghyan "Saghyan et al., 2012") for
-the case of 3 adjacent homogeneous layers of tissue.  The software
+diffusion described in (\ref saghyan "Saghyan et al., 2012") 
+and in (\ref arranz "Arranz et al., 2014") for the case of
+3 adjacent homogeneous layers of tissue.  The software
 is useful in modeling or analyzing data from extracellular
 diffusion measurements made with the Real-Time Iontophoretic
 (RTI) method (\ref nicholson "Nicholson and Phillips, 1981")
@@ -19,9 +20,10 @@ parameters.  The two programs, 3layer and fit-layer, are
 described below.
 
 The implementation described in (Saghyan et al., 2012) was in 
-IDL; this implementation is in C.  This implementation has some 
-improvements over the IDL implementation, for example the 
-addition of linear nonspecific clearance in the model.
+IDL.  This implementation is in C and is described in
+(Arranz et al., 2014).  It has some improvements over the
+IDL implementation, for example the addition of linear
+nonspecific clearance in the model.
 
 Each layer is assumed to have a constant extracellular volume
 fraction \f$\alpha\f$, a constant diffusion permeability
@@ -54,6 +56,12 @@ size of the grid used for the finite difference calculations
 
 References:
 
+\anchor arranz
+  Arranz AM, Perkins KL, Irie F, Lewis DP, Hrabe J, Xiao F, Itano N,
+  Kimata K, Hrabetova S, Yamaguchi Y (2014) Hyaluronan deficiency due
+  to Has3 knock-out causes altered neuronal activity and seizures via
+  reduction in brain extracellular space.  J Neurosci 34:6164-76.
+
 \anchor nicholson
   Nicholson C, Phillips JM (1981) Ion diffusion modified by 
   tortuosity and volume fraction in the extracellular 
@@ -63,7 +71,6 @@ References:
   Saghyan A, Lewis DP, Hrabe J, Hrabetova S (2012) Extracellular 
   diffusion in laminar brain structures exemplified by hippocampus.  
   J Neurosci Methods 205:110-8.  Epub 2011 Dec 30.
-
 
 
 \section license_sec License
