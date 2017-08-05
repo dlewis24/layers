@@ -126,13 +126,20 @@ read into a plotting program like Gnuplot.
 
 \section unpacking_sec Unpacking the Software
 
-After the tar archive is downloaded, the software can be extracted
-with WinZip (Windows) or the tar utility (Linux), if it hasn't
-already been extracted during the download. For example in Linux,
+If the archive is downloaded as a .zip or .tar.gz file, the
+software can be extracted with unzip or tar.  For example,
 
 <code>
-$ <b>tar -xf layers-1.2.tar</b><br>
-$ <b>cd layers-1.2</b>
+$ <b>unzip layers-master.zip</b><br>
+  <b>...</b><br>
+$ <b>cd layers-master</b>
+</code>
+
+or
+
+<code>
+$ <b>tar -xzf layers-1.2.1.tar.gz</b><br>
+$ <b>cd layers-1.2.1</b>
 </code>
 
 
@@ -140,10 +147,11 @@ $ <b>cd layers-1.2</b>
 \section install_sec Installation
 
 There is no special installation procedure. Individual programs
-are compiled separately. In order to avoid the user's having to
-specify the absolute or relative path each time a program is run,
-the programs can be copied to a directory in the user's path, or 
-the PATH environment variable can be appropriately modified.
+are compiled separately with the 'make' utility. In order to avoid
+the user's having to specify the absolute or relative path each time
+a program is run, the programs 3layer and fit-layer can be copied
+to a directory in the user's path, or the PATH environment variable
+can be appropriately modified.
 
 
 
@@ -152,14 +160,11 @@ the PATH environment variable can be appropriately modified.
 The program 3layer calculates the extracellular concentration
 of a substance as a function of time from a point source
 embedded in an environment comprised of 3 homogeneous layers.
-The diffusion parameters in each layer, size of the cylinder,
-thickness of each layer, etc., are given.
-
-This program outputs the extracellular concentration at the probe
+It outputs the extracellular concentration at the probe
 as a function of time, in order to model data from RTI diffusion
 measurements.  It optionally outputs images showing the spatial
 distribution of the concentration at regularly-spaced time points 
-in order to model data from Integrative Optical Imaging (IOI) 
+in order to model data from integrative optical imaging (IOI)
 diffusion measurements.
 
 \subsection three_layer_compiling_sec Compiling
@@ -231,25 +236,29 @@ adjusted by the program for a number of reasons:
 
 - Discretization:  The source and the probe positions are 
   adjusted to fall on grid points, and the layer boundaries 
-  are adjusted to fall midway between the grid points.
+  are adjusted to fall midway between grid points.
 
 - Equal resolutions in \f$r\f$ and \f$z\f$:  The cylinder radius 
   is adjusted if necessary to make the spatial resolutions in 
   both the \f$r\f$- and \f$z\f$-directions equal.
 
 The output file includes the extracellular concentration
-(not the tissue concentration) at the probe as a function
-of time (columns 1 and 2) and a "characteristic curve" fit
+(not the tissue concentration) at the probe (column 2) as a
+function of time (column 1) and a "characteristic curve" fit
 to this data using the traditional model used in RTI analysis
 (column 3).  The traditional model assumes that the environment
 consists of one homogeneous layer.  Although the characteristic
 curve often closely matches the curve from the 3-layer model,
 the corresponding fit parameters (the "apparent parameters")
 are not physically meaningful, because the assumption of one 
-homogeneous region is incorrect.
+homogeneous region is incorrect.  In (Saghyan et al., 2012)
+average values of the "apparent parameters" from several data
+sets were used to parametrize a characteristic curve which was
+then input to fit-layer to find the diffusion parameters of
+the SP layer.
 
 The 3layer directory also has an example output file,
-"sample.dat.orig".  It was generated from 3layer with
+"sample.dat.orig".  We generated the file from 3layer with
 the command
 
 <code>
@@ -344,15 +353,16 @@ algorithm, using for the forward problem the same multilayer
 model that 3layer uses.
 
 As mentioned above, traditional analysis of RTI data assumes
-that the measurement region is homogeneous.  If the region is not
-homogeneous, the diffusion parameters obtained from the fitting
-procedure can be very inaccurate.  For example, in the CA1 region
-of hippocampus we find that traditional analysis is adequate for
-determining the parameters in SO and SR, since the measurements
-in these layers can be made away from adjacent layers.  However,
-RTI diffusion measurements in the thin SP layer are confounded
-by diffusion in the adjacent SO and SR layers, so multilayer
-analysis must be used to determine the diffusion parameters in SP.
+that the measurement region is homogeneous.  If the region
+is not homogeneous, the diffusion parameters obtained from
+the traditional fitting procedure can be very inaccurate.
+For example, in the CA1 region of hippocampus we find that
+traditional analysis is adequate for determining the parameters
+in SO and SR, since the measurements in these layers can be made
+away from adjacent layers.  However, RTI diffusion measurements
+in the thin SP layer are confounded by diffusion in the adjacent
+SO and SR layers, so multilayer analysis must be used to determine
+the diffusion parameters in SP.
 
 \subsection fit_layer_compiling_sec Compiling
 
@@ -370,8 +380,8 @@ $ <b>make fit-layer</b><br>
 When you run fit-layer you specify an input file of parameters and
 data, and when the program finishes it will write the fitted SP
 parameters and the corresponding concentration to an output file.
-By default the output file will have the same basename as but
-a different extension than the input file.  You can get a usage
+By default the output file will have the same basename as, but
+a different extension than, the input file.  You can get a usage
 statement and a list of command-line options by running fit-layer
 without specifying the input file:
 
@@ -435,7 +445,7 @@ program for a number of reasons:
 
 - Discretization:  The source and the probe positions are 
   adjusted to fall on grid points, and the layer boundaries 
-  are adjusted to fall midway between the grid points. 
+  are adjusted to fall midway between grid points.
 
 - Equal resolutions in \f$r\f$ and \f$z\f$:  The cylinder radius 
   is adjusted if necessary to make the spatial resolutions in 
@@ -457,7 +467,7 @@ other layers.  The last two columns are for the input concentration
 concentration data taken from the input file.  
 
 The fit-layer directory also has an example output file,
-"data.dat.orig".  It was generated from fit-layer with
+"data.dat.orig".  We generated the file from fit-layer with
 the command
 
 <code>
