@@ -313,35 +313,6 @@ gnuplot> <b>set title "Comparison of new data to original data"</b><br>
 gnuplot> <b>plot [0:150][0:1] "sample.dat" using 1:2 title "sample.dat", "sample.dat.orig" using 1:2 title "sample.dat.orig"</b><br>
 </code>
 
-The diffusion curve looks very similar to a typical RTI diffusion
-curve from a homogeneous region.  In fact, if you fit diffusion
-data from multiple layers with the traditional model used in RTI,
-which assumes that the diffusion occurs in one homogeneous region,
-often the curve from the fit will match the data very well.
-Such a curve is called a "characteristic curve" in (Saghyan et
-al., 2012).  However, since the assumption of one homogeneous
-region is incorrect, the ECS parameters determined in such a
-fit are not physically meaningful.  The 3layer program fits the
-curve from the multilayer model with such a characteristic curve
-for comparison:
-
-<code>
-gnuplot> <b>set title "Comparison with characteristic curve"</b><br>
-gnuplot> <b>plot [0:150][0:1] "sample.dat" using 1:2 title "3-Layer Model", "sample.dat" using 1:3 title "Characteristic Curve"</b><br>
-gnuplot> <b>exit</b><br>
-  <br>
-$ <b>grep Fit sample.dat</b><br>
-# Fit for characteristic curve:<br>
-# Fitted apparent alpha = 0.264998<br>
-# Fitted apparent theta = 0.340114  (lambda = 1.714698)
-</code>
-
-So if you fit data from a region with multiple layers using the
-traditional model, the fit parameters can be very inaccurate.
-A multilayer model is needed for an accurate fit.  For more
-detail see (Saghyan et al., 2012).  The program fit-layer does
-such a multilayer fit.
-
 
 \section fit_layer_sec Fit-layer
 
@@ -474,13 +445,6 @@ the command
 $ ./fit-layer --nr 100 --nz 200 --outfile data.dat.orig data.txt
 </code>
 
-You can search for the fitted parameters with grep:
-
-<code>
-$ <b>grep Fitted data.dat.orig</b><br>
-...
-</code>
-
 
 \subsection fit_layer_testing_sec Testing
 
@@ -490,21 +454,22 @@ You can run
 $ <b>./fit-layer --nr 100 --nz 200 data.txt</b>
 </code>
 
-and check the fit
+and compare your output file data.dat with data.dat.orig.
+
+You can search for the fitted parameters with grep:
 
 <code>
 $ <b>grep Fitted data.dat</b><br>
-# Fitted alpha = 0.102433<br>
-# Fitted theta = 0.294797  (lambda = 1.841783)<br>
-# Fitted kappa = 0.000178 s^-1<br>
+\# Fitted alpha = 0.102433<br>
+\# Fitted theta = 0.294797  (lambda = 1.841783)<br>
+\# Fitted kappa = 0.000178 s^-1<br>
 </code>
 
-and compare your output file data.dat with data.dat.orig.
-The parameters from the fit correspond to the SP layer.  They are
+These fitted parameters correspond to the SP layer.  They are
 close to the true values of \f$\alpha\f$ = 0.10, \f$\theta\f$ =
 0.30, and \f$\kappa\f$ = 0.0 s^-1 for this test (values from
 sample.par).  A small grid size (100 x 200) is used to reduce the
-total runtime for this test.  Nevertheless, the program might take
+total run time for this test.  Nevertheless, the program might take
 several minutes to run, depending on the speed of your computer.
 
 The two output data files should differ in the following lines:
