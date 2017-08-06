@@ -193,7 +193,7 @@ $ make 3layer
 When you run 3layer you specify an input file of parameters,
 and when the program finishes it will write the calculated
 concentration to an output file.  By default the output file
-will have the same basename as but a different extension than
+will have the same basename as, but a different extension than,
 the input file.  You can get a usage statement and a list of
 command-line options by running 3layer without specifying the
 input file:
