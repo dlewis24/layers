@@ -1,0 +1,48 @@
+\form#0:$\alpha$
+\form#1:$\theta$
+\form#2:$\kappa$
+\form#3:$ dt < dr^2 / (6D) $
+\form#4:$nr$
+\form#5:$nz$
+\form#6:$z=0$
+\form#7:$r$
+\form#8:$z$
+\form#9:$ c $
+\form#10:\[ \nabla^2{c} = \frac{\partial^2 c}{\partial z^2} + \frac{\partial^2 c}{\partial r^2} + \frac{1}{r} \frac{\partial c} {\partial r} + \frac{1}{r^2} \frac{\partial^2 c}{\partial \phi^2} \]
+\form#11:$ \partial^2c/\partial \phi^2 = 0 $
+\form#12:$ \Delta z = \Delta r $
+\form#13:\[ \mathbf{L} = \left( \begin{array}{ccc} 0 & 1 & 0 \\ 1 & -4 & 1 \\ 0 & 1 & 0 \end{array} \right) \]
+\form#14:$ \Delta r^2 \; (= \Delta z^2) $
+\form#15:$ r $
+\form#16:\[ \mathbf{D} = \left( \begin{array}{ccc} 0 & 0 & 0 \\ -1 & 0 & 1 \\ 0 & 0 & 0 \end{array} \right) \]
+\form#17:$ 2 \Delta r $
+\form#18:$ z $
+\form#19:$ 1/r $
+\form#20:$ r = 0 $
+\form#21:\[\lim_{r \to 0} (\partial c/\partial r) / r = \partial ^2c/\partial r^2 \]
+\form#22:\[ \nabla^2{c} = \partial ^2c/\partial z^2 + 2 \partial ^2c/\partial r^2 \qquad (r = 0) \]
+\form#23:\[ \mathbf{L0} = \left( \begin{array}{ccc} 0 & 1 & 0 \\ 2 & -6 & 2 \\ 0 & 1 & 0 \end{array} \right) \]
+\form#24:$ \theta D_{free} $
+\form#25:\[ \mathbf{out} = s_1 \mathbf{L} * \mathbf{a} + \frac{s_2}{r} \mathbf{D} * \mathbf{a} \qquad (r \neq 0) \]
+\form#26:\[ \mathbf{out} = s_1 \mathbf{L0} * \mathbf{a} \qquad (r = 0) \]
+\form#27:$ \mathbf{out} $
+\form#28:$ s_1, s_2 $
+\form#29:$ \mathbf{a} $
+\form#30:$ * $
+\form#31:$ \mathbf{L} $
+\form#32:$ \mathbf{L0} $
+\form#33:$ \mathbf{D} $
+\form#34:$ j = 1 $
+\form#35:$ 4 \: tan^{-1}(1) $
+\form#36:$ k $
+\form#37:\[ \frac{\partial c_k(\vec r, t)}{\partial t} = D_{free} \theta_k \nabla^2{c_k(\vec r, t)} + s/\alpha_k - \kappa_k c_k(\vec r, t) \quad , \]
+\form#38:\[ c(\vec r_k, t) = c(\vec r_{k+1}, t) \quad \]
+\form#39:\[ \alpha_k \theta_k \nabla c(\vec r_k, t) = \alpha_{k+1} \theta_{k+1} \nabla c(\vec r_{k+1}, t) \quad \]
+\form#40:$ c(\vec r, t) = 0 $
+\form#41:$ c_k(\vec r, t) $
+\form#42:$ D_{free} $
+\form#43:$ \theta_k $
+\form#44:$ s_k(\vec r, t) $
+\form#45:$ \alpha_k $
+\form#46:$ \kappa_k $
+\form#47:$ t_{i+1} = t_i + \Delta t $

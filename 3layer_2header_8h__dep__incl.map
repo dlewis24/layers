@@ -1,0 +1,7 @@
+<map id="3layer/header.h" name="3layer/header.h">
+<area shape="rect" id="node2" href="$3layer_8c.html" title="Calculates the extracellular concentration of a substance diffusing in an environment consisting of 3..." alt="" coords="5,80,112,107"/>
+<area shape="rect" id="node3" href="$3layer_2extras_8c.html" title="Extra functions that are useful for 3layer. " alt="" coords="137,80,245,107"/>
+<area shape="rect" id="node4" href="$io_8c.html" title="Input/output functions that are useful for 3layer. " alt="" coords="269,80,352,107"/>
+<area shape="rect" id="node5" href="$3layer_2model_8c.html" title="Function for solving the forward problem with the 3&#45;layer model. " alt="" coords="376,80,483,107"/>
+<area shape="rect" id="node6" href="$rti-theory_8c.html" title="Functions for fitting the homogeneous model to the data (traditional fit) to obtain the apparent para..." alt="" coords="507,80,629,107"/>
+</map>
