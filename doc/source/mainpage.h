@@ -220,7 +220,7 @@ the command line.  If any parameter is specified both in the input
 file and on the command line, the parameter value specified on the
 command line takes precedence.  If any parameter is not specified,
 its default value from the program is used.  Parameter assignments
-in the input file are of the form \<parameter name\> = \<value\>.
+in the input file are of the form `<parameter name> = <value>`.
 
 The 3layer directory has an example input file called "sample.par".
 The comments in sample.par describe the input file format in 
@@ -289,10 +289,10 @@ The program might take a few minutes to run, depending on the
 speed of your computer.
 
 The two output data files should differ in the following lines:
-	-# The line listing the command used
-	-# The lines listing the start time, end time, and total time
-	-# The Solution lines will probably differ in the last 3 numbers, 
-	   since they are the total time in seconds, minutes, and hours
+1. The line listing the command used
+2. The lines listing the start time, end time, and total time
+3. The Solution lines will probably differ in the last 3 numbers,
+   since they are the total time in seconds, minutes, and hours
 
 If the parameters or the concentration data of these two output
 files are substantially different for this test, please report it
@@ -484,10 +484,10 @@ total run time for this test.  Nevertheless, the program might take
 several minutes to run, depending on the speed of your computer.
 
 The two output data files should differ in the following lines:
-	-# The line listing the command used
-	-# The lines listing the start time, end time, and total time
-	-# The Solution lines will probably differ in the last 3 numbers, 
-	   since they are the total time in seconds, minutes, and hours
+1. The line listing the command used
+2. The lines listing the start time, end time, and total time
+3. The Solution lines will probably differ in the last 3 numbers,
+   since they are the total time in seconds, minutes, and hours
 
 If the parameters or the concentration data of these two output
 files are substantially different for this test, please report it
