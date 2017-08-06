@@ -163,7 +163,7 @@ a program is run, the programs 3layer and fit-layer can be copied
 to a directory in the user's path, or the PATH environment variable
 can be appropriately modified.
 
-
+-----------------------------------------------------------------
 
 # 3layer
 
@@ -323,6 +323,7 @@ gnuplot> set title "Comparison of new data to original data"
 gnuplot> plot [0:150][0:1] "sample.dat" using 1:2 title "sample.dat", "sample.dat.orig" using 1:2 title "sample.dat.orig"
 ```
 
+-----------------------------------------------------------------
 
 # Fit-layer
 
