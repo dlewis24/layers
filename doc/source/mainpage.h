@@ -129,19 +129,18 @@ read into a plotting program like Gnuplot.
 If the archive is downloaded as a .zip or .tar.gz file, the
 software can be extracted with unzip or tar.  For example,
 
-<code>
-$ <b>unzip layers-master.zip</b><br>
-  <b>...</b><br>
-$ <b>cd layers-master</b>
-</code>
+```
+$ unzip layers-master.zip
+...
+$ cd layers-master
+```
 
 or
 
-<code>
-$ <b>tar -xzf layers-1.2.1.tar.gz</b><br>
-$ <b>cd layers-1.2.1</b>
-</code>
-
+```
+$ tar -xzf layers-1.2.1.tar.gz
+$ cd layers-1.2.1
+```
 
 
 \section install_sec Installation
@@ -171,11 +170,11 @@ diffusion measurements.
 
 To compile the program, run 'make' in the 3layer directory:
 
-<code>
-$ <b>cd 3layer</b><br>
-$ <b>make 3layer</b><br>
+```
+$ cd 3layer
+$ make 3layer
 ...
-</code>
+```
 
 
 \subsection three_layer_running_sec Running
@@ -188,11 +187,11 @@ the input file.  You can get a usage statement and a list of
 command-line options by running 3layer without specifying the
 input file:
 
-<code>
-$ <b>./3layer</b><br>
-Usage: 3layer [options] \<input_file\><br>
+```
+$ ./3layer
+Usage: 3layer [options] <input_file>
 ...
-</code>
+```
 
 (On Linux/Unix, the characters "./" preceding the program name mean
 "run the program from the current directory" and are not necessary 
@@ -261,18 +260,18 @@ The 3layer directory also has an example output file,
 "sample.dat.orig".  We generated the file from 3layer with
 the command
 
-<code>
+```
 $ ./3layer --outfile sample.dat.orig sample.par
-</code>
+```
 
 
 \subsection three_layer_testing_sec Testing
 
 You can run
 
-<code>
-$ <b>./3layer sample.par</b>
-</code>
+```
+$ ./3layer sample.par
+```
 
 and compare your output file sample.dat with sample.dat.orig.
 The program might take a few minutes to run, depending on the
@@ -294,24 +293,24 @@ to the program's author.
 The output files are in a format that can be graphed with
 gnuplot.  For example,
 
-<code>
-$ <b>gnuplot</b><br>
-...<br>
-gnuplot> <b>set style data lines</b><br>
-gnuplot> <b>set xlabel "Time (s)"</b><br>
-gnuplot> <b>set ylabel "Concentration (mM)"</b><br>
-gnuplot> <b>set title "Diffusion curve calculated from multilayer model"</b><br>
-gnuplot> <b>plot [0:150][0:1] "sample.dat" using 1:2 title "sample.dat"</b>
-</code>
+```
+$ gnuplot
+...
+gnuplot> set style data lines
+gnuplot> set xlabel "Time (s)"
+gnuplot> set ylabel "Concentration (mM)"
+gnuplot> set title "Diffusion curve calculated from multilayer model"
+gnuplot> plot [0:150][0:1] "sample.dat" using 1:2 title "sample.dat"
+```
 
 If you plot the diffusion curve from the test run with
 the original data that was provided, the curves should be
 indistinguishable:
 
-<code>
-gnuplot> <b>set title "Comparison of new data to original data"</b><br>
-gnuplot> <b>plot [0:150][0:1] "sample.dat" using 1:2 title "sample.dat", "sample.dat.orig" using 1:2 title "sample.dat.orig"</b><br>
-</code>
+```
+gnuplot> set title "Comparison of new data to original data"
+gnuplot> plot [0:150][0:1] "sample.dat" using 1:2 title "sample.dat", "sample.dat.orig" using 1:2 title "sample.dat.orig"
+```
 
 
 \section fit_layer_sec Fit-layer
@@ -339,11 +338,11 @@ the diffusion parameters in SP.
 
 To compile the program, run 'make' in the fit-layer directory:
 
-<code>
-$ <b>cd ../fit-layer</b><br>
-$ <b>make fit-layer</b><br>
+```
+$ cd ../fit-layer
+$ make fit-layer
 ...
-</code>
+```
 
 
 \subsection fit_layer_running_sec Running
@@ -356,11 +355,11 @@ a different extension than, the input file.  You can get a usage
 statement and a list of command-line options by running fit-layer
 without specifying the input file:
 
-<code>
-$ <b>./fit-layer</b><br>
-Usage: fit-layer [options] \<input_file\><br>
-...<br>
-</code>
+```
+$ ./fit-layer
+Usage: fit-layer [options] <input_file>
+...
+```
 
 The program fit-layer can take several minutes, hours, or even
 weeks to run, depending on the size of the grid and the speed
@@ -441,29 +440,29 @@ The fit-layer directory also has an example output file,
 "data.dat.orig".  We generated the file from fit-layer with
 the command
 
-<code>
+```
 $ ./fit-layer --nr 100 --nz 200 --outfile data.dat.orig data.txt
-</code>
+```
 
 
 \subsection fit_layer_testing_sec Testing
 
 You can run
 
-<code>
-$ <b>./fit-layer --nr 100 --nz 200 data.txt</b>
-</code>
+```
+$ ./fit-layer --nr 100 --nz 200 data.txt
+```
 
 and compare your output file data.dat with data.dat.orig.
 
 You can search for the fitted parameters with grep:
 
-<code>
-$ <b>grep Fitted data.dat</b><br>
-\# Fitted alpha = 0.102433<br>
-\# Fitted theta = 0.294797  (lambda = 1.841783)<br>
-\# Fitted kappa = 0.000178 s^-1<br>
-</code>
+```
+$ grep Fitted data.dat
+# Fitted alpha = 0.102433
+# Fitted theta = 0.294797  (lambda = 1.841783)
+# Fitted kappa = 0.000178 s^-1
+```
 
 These fitted parameters correspond to the SP layer.  They are
 close to the true values of \f$\alpha\f$ = 0.10, \f$\theta\f$ =
@@ -488,24 +487,24 @@ to the program's author.
 The output files are in a format that can be graphed with
 gnuplot.  For example,
 
-<code>
-$ <b>gnuplot</b><br>
-...<br>
-gnuplot> <b>set style data lines</b><br>
-gnuplot> <b>set xlabel "Time (s)"</b><br>
-gnuplot> <b>set ylabel "Concentration (mM)"</b><br>
-gnuplot> <b>set title "Fit of multilayer model to input data"</b><br>
-gnuplot> <b>plot [0:150][0:1] "data.dat" using 1:2 title "Data from fit", "data.dat" using 3:4 title "Input data"</b>
-</code>
+```
+$ gnuplot
+...
+gnuplot> set style data lines
+gnuplot> set xlabel "Time (s)"
+gnuplot> set ylabel "Concentration (mM)"
+gnuplot> set title "Fit of multilayer model to input data"
+gnuplot> plot [0:150][0:1] "data.dat" using 1:2 title "Data from fit", "data.dat" using 3:4 title "Input data"
+```
 
 If you plot the diffusion curve from the test run with
 the original data that was provided, the curves should be
 indistinguishable:
 
-<code>
-gnuplot> <b>set title "Comparison of new data to original data"</b><br>
-gnuplot> <b>plot [0:150][0:1] "data.dat" using 1:2 title "data.dat", "data.dat.orig" using 1:2 title "data.dat.orig"</b>
-</code>
+```
+gnuplot> set title "Comparison of new data to original data"
+gnuplot> plot [0:150][0:1] "data.dat" using 1:2 title "data.dat", "data.dat.orig" using 1:2 title "data.dat.orig"
+```
 
 
 
