@@ -85,7 +85,7 @@ References:
   space. Physiol Rev 88:1277-1340.
 
 
-\section license_sec License
+# License
 
 Copyright (C) 2012-2013 David Lewis, CABI, NKI
 
@@ -106,7 +106,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA
 02110-1301, USA.
 
 
-\section prereq_sec Prerequisites
+# Prerequisites
 
 This software runs on Linux. It was developed on CentOS 5.6
 and tested on Centos 6.0, Debian 6.0.4, and Gentoo, and it
@@ -124,7 +124,7 @@ The software outputs data in ASCII format, so it can be easily
 read into a plotting program like Gnuplot.
 
 
-\section unpacking_sec Unpacking the Software
+# Unpacking the Software
 
 If the archive is downloaded as a .zip or .tar.gz file, the
 software can be extracted with unzip or tar.  For example,
@@ -143,7 +143,7 @@ $ cd layers-1.2.1
 ```
 
 
-\section install_sec Installation
+# Installation
 
 There is no special installation procedure. Individual programs
 are compiled separately with the 'make' utility. In order to avoid
@@ -154,7 +154,7 @@ can be appropriately modified.
 
 
 
-\section three_layer_sec 3layer
+# 3layer
 
 The program 3layer calculates the extracellular concentration
 of a substance as a function of time from a point source
@@ -166,7 +166,7 @@ distribution of the concentration at regularly-spaced time points
 in order to model data from integrative optical imaging (IOI)
 diffusion measurements.
 
-\subsection three_layer_compiling_sec Compiling
+## Compiling
 
 To compile the program, run 'make' in the 3layer directory:
 
@@ -177,7 +177,7 @@ $ make 3layer
 ```
 
 
-\subsection three_layer_running_sec Running
+## Running
 
 When you run 3layer you specify an input file of parameters,
 and when the program finishes it will write the calculated
@@ -201,7 +201,7 @@ The program 3layer can take several minutes or hours to run,
 depending on the size of the grid and the speed of your computer.
 
 
-\subsection three_layer_input_sec Input File
+## Input File
 
 Parameters to the program (such as the size of the environment and
 the diffusion parameters) can be specified in the input file or on
@@ -222,7 +222,7 @@ are relative to the source position; see the file coordinates.pdf.
 This convention was chosen to be consistent with that of the
 program fit-layer.
 
-\subsection three_layer_output_sec Output File
+## Output File
 
 The output file includes a list of parameters and concentration
 data from the run.  Note that some of the input parameters get
@@ -265,7 +265,7 @@ $ ./3layer --outfile sample.dat.orig sample.par
 ```
 
 
-\subsection three_layer_testing_sec Testing
+## Testing
 
 You can run
 
@@ -288,7 +288,7 @@ files are substantially different for this test, please report it
 to the program's author.
 
 
-\subsection three_layer_graphing_sec Graphing
+## Graphing
 
 The output files are in a format that can be graphed with
 gnuplot.  For example,
@@ -313,7 +313,7 @@ gnuplot> plot [0:150][0:1] "sample.dat" using 1:2 title "sample.dat", "sample.da
 ```
 
 
-\section fit_layer_sec Fit-layer
+# Fit-layer
 
 The program fit-layer fits the multilayer model to RTI data
 obtained in a region with 3 homogeneous layers in order
@@ -334,7 +334,7 @@ in the thin SP layer are confounded by diffusion in the adjacent
 SO and SR layers, so multilayer analysis must be used to determine
 the diffusion parameters in SP.
 
-\subsection fit_layer_compiling_sec Compiling
+## Compiling
 
 To compile the program, run 'make' in the fit-layer directory:
 
@@ -345,7 +345,7 @@ $ make fit-layer
 ```
 
 
-\subsection fit_layer_running_sec Running
+## Running
 
 When you run fit-layer you specify an input file of parameters and
 data, and when the program finishes it will write the fitted SP
@@ -366,7 +366,7 @@ weeks to run, depending on the size of the grid and the speed
 of your computer.
 
 
-\subsection fit_layer_input_sec Input File
+## Input File
 
 The parameter assignment section of an input file for fit-layer
 is similar to an input file for 3layer.  Parameters to the program
@@ -402,7 +402,7 @@ to enter these values in the input file, rather than to
 specify positions relative to a fictitious boundary, 
 such as the bottom of the cylinder.
 
-\subsection fit_layer_output_sec Output File
+## Output File
 
 The output file includes a list of parameters used for the fit.
 Note that some of the input parameters get adjusted by the
@@ -445,7 +445,7 @@ $ ./fit-layer --nr 100 --nz 200 --outfile data.dat.orig data.txt
 ```
 
 
-\subsection fit_layer_testing_sec Testing
+## Testing
 
 You can run
 
@@ -482,7 +482,7 @@ files are substantially different for this test, please report it
 to the program's author.
 
 
-\subsection fit_layer_graphing_sec Graphing
+## Graphing
 
 The output files are in a format that can be graphed with
 gnuplot.  For example,
