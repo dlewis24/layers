@@ -124,6 +124,17 @@ The software outputs data in ASCII format, so it can be easily
 read into a plotting program like Gnuplot.
 
 
+# Generating the Documentation Locally
+
+The full documentation can be generated locally with Doxygen.
+In order to do so Doxygen needs to be installed with LaTeX support.
+Doxygen will generate the html documentation using the file Doxyfile,
+the file doc/source/mainpage.h, and the source code for the programs
+3layer and fit-layer. The html documentation will be output to the
+directory doc/html and can be read by pointing a browser to
+doc/html/index.html .
+
+
 # Unpacking the Software
 
 If the archive is downloaded as a .zip or .tar.gz file, the
