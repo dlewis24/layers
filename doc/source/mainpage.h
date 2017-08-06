@@ -57,7 +57,7 @@ Note that the run time of each program depends heavily on the
 size of the grid used for the finite difference calculations
 (the \f$nr\f$ and \f$nz\f$ parameters).
 
-References:
+## References:
 
 \anchor arranz
   Arranz AM, Perkins KL, Irie F, Lewis DP, Hrabe J, Xiao F, Itano N,
@@ -85,7 +85,7 @@ References:
   space. Physiol Rev 88:1277-1340.
 
 
-# License
+## License
 
 Copyright (C) 2012-2013 David Lewis, CABI, NKI
 
@@ -106,7 +106,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA
 02110-1301, USA.
 
 
-# Prerequisites
+## Prerequisites
 
 This software runs on Linux. It was developed on CentOS 5.6
 and tested on Centos 6.0, Debian 6.0.4, and Gentoo, and it
@@ -124,7 +124,7 @@ The software outputs data in ASCII format, so it can be easily
 read into a plotting program like Gnuplot.
 
 
-# Generating the Documentation Locally
+## Generating the Documentation Locally
 
 The full documentation can be generated locally with Doxygen.
 In order to do so Doxygen needs to be installed with LaTeX support.
@@ -135,7 +135,7 @@ directory doc/html and can be read by pointing a browser to
 doc/html/index.html .
 
 
-# Unpacking the Software
+## Unpacking the Software
 
 If the archive is downloaded as a .zip or .tar.gz file, the
 software can be extracted with unzip or tar.  For example,
@@ -154,7 +154,7 @@ $ cd layers-1.2.1
 ```
 
 
-# Installation
+## Installation
 
 There is no special installation procedure. Individual programs
 are compiled separately with the 'make' utility. In order to avoid
