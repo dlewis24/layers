@@ -88,8 +88,8 @@ of the License, or (at your option) any later version.
 This program is distributed in the hope that it will be useful,
 but WITHOUT ANY WARRANTY; without even the implied warranty of
 MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-<a href="http://www.gnu.org/licenses/old-licenses/gpl-2.0.html#SEC1"
->GNU General Public License</a> for more details.
+[GNU General Public License](http://www.gnu.org/licenses/old-licenses/gpl-2.0.html#SEC1)
+for more details.
 
 You should have received a copy of the GNU General Public License
 along with this program; if not, write to the Free Software
