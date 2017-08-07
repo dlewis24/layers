@@ -1,10 +1,5 @@
 # Introduction 
 
-<I> This documentation is generated automatically by Doxygen from the
-source code comments found in the *.c and *.h files.  In particular,
-every external (variable, macro, function, etc.) has a documentation
-entry. </I>
-
 __This documentation describes two programs, 3layer and fit-layer,
 available at https://github.com/dlewis24/layers .__
 
