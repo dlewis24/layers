@@ -32,9 +32,9 @@ IDL implementation, for example the addition of linear
 nonspecific clearance in the model.
 
 Each layer is assumed to have a constant extracellular volume
-fraction \f$\alpha\f$, a constant diffusion permeability
-\f$\theta\f$, and a constant nonspecific clearance factor
-\f$\kappa\f$.  The 3 layers we had in mind when writing this
+fraction *&alpha;*, a constant diffusion permeability
+*&theta;*, and a constant nonspecific clearance factor
+*&kappa;*.  The 3 layers we had in mind when writing this
 software are stratum oriens (SO), stratum pyramidale (SP), and
 stratum radiatum (SR) of the CA1 region of the hippocampus,
 which is why the names of the diffusion parameters end in
@@ -52,13 +52,13 @@ The software uses the Forward Time Centered Space (FTCS) finite
 difference scheme to solve the diffusion equation.  This simple
 fully explicit scheme avoids having to deal with large sparse
 matrices.  However, many time-steps must be used in order to meet 
-the von Neumann stability criterion, \f$ dt < dr^2 / (6D) \f$ ,
+the von Neumann stability criterion, *dt* < *dr*<sup> 2</sup> / (6*D*) ,
 which can result in long program run times, especially for 
 the program fit-layer.
 
 Note that the run time of each program depends heavily on the
 size of the grid used for the finite difference calculations
-(the \f$nr\f$ and \f$nz\f$ parameters).
+(the *nr* and *nz* parameters).
 
 ## References:
 
@@ -243,7 +243,7 @@ data from the run.  Note that some of the input parameters get
 adjusted by the program for a number of reasons:
 
 - Shift of z-coordinates:  The program uses a coordinate system 
-  where the bottom of the cylinder defines \f$z=0\f$ and the
+  where the bottom of the cylinder defines *z*=0 and the
   input file uses a coordinate system where the source defines
   the origin.
 
@@ -251,9 +251,9 @@ adjusted by the program for a number of reasons:
   adjusted to fall on grid points, and the layer boundaries 
   are adjusted to fall midway between grid points.
 
-- Equal resolutions in \f$r\f$ and \f$z\f$:  The cylinder radius 
+- Equal resolutions in *r* and *z*:  The cylinder radius 
   is adjusted if necessary to make the spatial resolutions in 
-  both the \f$r\f$- and \f$z\f$-directions equal.
+  both the *r*- and *z*-directions equal.
 
 The output file includes the extracellular concentration
 (not the tissue concentration) at the probe (column 2) as a
@@ -424,7 +424,7 @@ Note that some of the input parameters get adjusted by the
 program for a number of reasons:
 
 - Shift of z-coordinates:  The program uses a coordinate system 
-  where the bottom of the cylinder defines \f$z=0\f$ and the
+  where the bottom of the cylinder defines *z*=0 and the
   input file uses a coordinate system where the source defines
   the origin.
 
@@ -432,12 +432,12 @@ program for a number of reasons:
   adjusted to fall on grid points, and the layer boundaries 
   are adjusted to fall midway between grid points.
 
-- Equal resolutions in \f$r\f$ and \f$z\f$:  The cylinder radius 
+- Equal resolutions in *r* and *z*:  The cylinder radius 
   is adjusted if necessary to make the spatial resolutions in 
-  both the \f$r\f$- and \f$z\f$-directions equal.
+  both the *r*- and *z*-directions equal.
 
 The output file also includes results of the fitting:  the fitted 
-values of \f$\alpha\f$, \f$\theta\f$, and \f$\kappa\f$ of the SP 
+values of *&alpha;*, *&theta;*, and *&kappa;* of the SP 
 layer.  Also included are details from the minimization algorithm 
 used, such as the number of iterations, the size of the final 
 simplex, and the total time for the program run.
@@ -480,8 +480,8 @@ $ grep Fitted data.dat
 ```
 
 These fitted parameters correspond to the SP layer.  They are
-close to the true values of \f$\alpha\f$ = 0.10, \f$\theta\f$ =
-0.30, and \f$\kappa\f$ = 0.0 s^-1 for this test (values from
+close to the true values of *&alpha;* = 0.10, *&theta;* =
+0.30, and *&kappa;* = 0.0 s<sup>-1</sup> for this test (values from
 sample.par).  A small grid size (100 x 200) is used to reduce the
 total run time for this test.  Nevertheless, the program might take
 several minutes to run, depending on the speed of your computer.
