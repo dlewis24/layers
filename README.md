@@ -1,7 +1,7 @@
 # Introduction 
 
-__This documentation describes two programs, 3layer and fit-layer,
-available at https://github.com/dlewis24/layers .__
+__The full documentation is available at
+https://dlewis24.github.io/layers .__
 
 This software implements the multilayer model of extracellular
 diffusion described in (Saghyan et al., 2012) 
