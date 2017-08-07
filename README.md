@@ -69,7 +69,7 @@ weight compounds in brain extracellular microenvironment
 measured with integrative optical imaging. Biophys J 65:2277-2290.
 
 Saghyan A, Lewis DP, Hrabe J, Hrabetova S (2012) Extracellular 
-diffusion in laminar brain structures exemplified by hippocampus.  
+diffusion in laminar brain structures exemplified by hippocampus. 
 J Neurosci Methods 205:110-118.
 
 Syková E, Nicholson C (2008) Diffusion in brain extracellular
@@ -93,7 +93,7 @@ for more details.
 
 You should have received a copy of the GNU General Public License
 along with this program; if not, write to the Free Software
-Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  
+Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 
 02110-1301, USA.
 
 
@@ -437,7 +437,7 @@ was calculated using the multilayer model using the fitted
 parameters for the SP layer and the given parameters for the 
 other layers.  The last two columns are for the input concentration 
 (column 4) as a function of time (column 3) -- i.e., the 
-concentration data taken from the input file.  
+concentration data taken from the input file. 
 
 The fit-layer directory also has an example output file,
 "data.dat.orig".  We generated the file from fit-layer with
