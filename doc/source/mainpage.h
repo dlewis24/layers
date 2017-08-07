@@ -8,6 +8,9 @@ source code comments found in the *.c and *.h files.  In particular,
 every external (variable, macro, function, etc.) has a documentation
 entry. </I>
 
+__This documentation describes two programs, 3layer and fit-layer,
+available at https://github.com/dlewis24/layers .__
+
 This software implements the multilayer model of extracellular
 diffusion described in (\ref saghyan "Saghyan et al., 2012") 
 and in (\ref arranz "Arranz et al., 2014") for the case of
